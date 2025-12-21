@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #140b1f 20%, #2a145a 50%),
+  background: radial-gradient(circle at top, #140b1f 0%, #2a145a 50%),
     linear-gradient(180deg, #1e1230, #140b1f);
   color: var(--text);
   font-family: "VT323", monospace;
@@ -151,20 +151,30 @@ nav a {
 .skill-card {
   background: linear-gradient(180deg, #24113f, #351b63);
   border: 3px solid var(--peach);
-  padding: 24px;
+
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
   text-align: center;
+
   box-shadow: 0 0 10px rgba(255, 214, 165, 0.4);
 }
 .skill-card img {
-  width: 48px;
+  width: 70%;
+  height: auto;
+  object-fit: contain;
   image-rendering: pixelated;
+  margin-bottom: 10px;
 }
 .skill-card span {
   color: var(--mint);
-  display: block;
-  margin-top: 12px;
   font-family: "Press Start 2P";
-  font-size: 12px;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 /* PROJECTS */
