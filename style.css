@@ -51,6 +51,12 @@ nav {
   gap: 24px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 nav a {
   text-decoration: none;
   color: var(--text);
@@ -67,9 +73,9 @@ nav a::after {
   background: var(--lavender);
   transform: translateY(-50%);
 }
-
-nav a:last-child::after {
-  content: none;
+nav a:hover::after {
+  background: var(--pink);
+  box-shadow: 0 0 6px var(--pink);
 }
 
 /* HERO */
