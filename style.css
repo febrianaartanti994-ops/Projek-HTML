@@ -45,10 +45,31 @@ body {
   font-family: "Press Start 2P";
   color: var(--lavender);
 }
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 nav a {
-  margin-left: 24px;
   text-decoration: none;
   color: var(--text);
+  position: relative;
+  padding-right: 18px;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--lavender);
+  transform: translateY(-50%);
+}
+
+nav a:last-child::after {
+  content: none;
 }
 
 /* HERO */
@@ -198,7 +219,8 @@ nav a {
   box-shadow: 0 0 14px rgba(255, 126, 182, 0.45), 6px 6px 0 #cdb4ff;
 }
 .project-card img {
-  width: 100%;
+  width: auto;
+  height: 150px;
   margin-bottom: 16px;
 }
 
